@@ -1,0 +1,9 @@
+c:\users\edgarulises\documents\visual studio 2013\Projects\CalendarTest\CalendarTest\bin\Debug\CalendarTest.exe.config
+C:\Users\edgarulises\documents\visual studio 2013\Projects\CalendarTest\CalendarTest\bin\Debug\CalendarTest.exe
+C:\Users\edgarulises\documents\visual studio 2013\Projects\CalendarTest\CalendarTest\bin\Debug\CalendarTest.pdb
+C:\Users\edgarulises\documents\visual studio 2013\Projects\CalendarTest\CalendarTest\obj\Debug\CalendarTest.csprojResolveAssemblyReference.cache
+C:\Users\edgarulises\documents\visual studio 2013\Projects\CalendarTest\CalendarTest\obj\Debug\CalendarTest.Form1.resources
+C:\Users\edgarulises\documents\visual studio 2013\Projects\CalendarTest\CalendarTest\obj\Debug\CalendarTest.Properties.Resources.resources
+C:\Users\edgarulises\documents\visual studio 2013\Projects\CalendarTest\CalendarTest\obj\Debug\CalendarTest.csproj.GenerateResource.Cache
+C:\Users\edgarulises\documents\visual studio 2013\Projects\CalendarTest\CalendarTest\obj\Debug\CalendarTest.exe
+C:\Users\edgarulises\documents\visual studio 2013\Projects\CalendarTest\CalendarTest\obj\Debug\CalendarTest.pdb
