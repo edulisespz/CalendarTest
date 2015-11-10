@@ -7,3 +7,4 @@ C:\Users\edgarulises\documents\visual studio 2013\Projects\CalendarTest\Calendar
 C:\Users\edgarulises\documents\visual studio 2013\Projects\CalendarTest\CalendarTest\obj\Debug\CalendarTest.csproj.GenerateResource.Cache
 C:\Users\edgarulises\documents\visual studio 2013\Projects\CalendarTest\CalendarTest\obj\Debug\CalendarTest.exe
 C:\Users\edgarulises\documents\visual studio 2013\Projects\CalendarTest\CalendarTest\obj\Debug\CalendarTest.pdb
+C:\Users\edgarulises\documents\visual studio 2013\Projects\CalendarTest\CalendarTest\obj\Debug\CalendarTest.FormLogin.resources
