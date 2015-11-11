@@ -35,6 +35,13 @@
             this.buttonModifica = new System.Windows.Forms.Button();
             this.buttonAgrega = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelAddCita = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePickerAddDate = new System.Windows.Forms.DateTimePicker();
+            this.textBoxAddNombre = new System.Windows.Forms.TextBox();
+            this.buttonAddCitaOK = new System.Windows.Forms.Button();
+            this.panelAddCita.SuspendLayout();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -90,6 +97,7 @@
             this.buttonAgrega.TabIndex = 5;
             this.buttonAgrega.Text = "button agregar";
             this.buttonAgrega.UseVisualStyleBackColor = true;
+            this.buttonAgrega.Click += new System.EventHandler(this.buttonAgrega_Click);
             // 
             // label1
             // 
@@ -100,11 +108,68 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "label1";
             // 
+            // panelAddCita
+            // 
+            this.panelAddCita.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelAddCita.Controls.Add(this.buttonAddCitaOK);
+            this.panelAddCita.Controls.Add(this.textBoxAddNombre);
+            this.panelAddCita.Controls.Add(this.dateTimePickerAddDate);
+            this.panelAddCita.Controls.Add(this.label3);
+            this.panelAddCita.Controls.Add(this.label2);
+            this.panelAddCita.Location = new System.Drawing.Point(227, 51);
+            this.panelAddCita.Name = "panelAddCita";
+            this.panelAddCita.Size = new System.Drawing.Size(241, 355);
+            this.panelAddCita.TabIndex = 7;
+            this.panelAddCita.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "label3";
+            // 
+            // dateTimePickerAddDate
+            // 
+            this.dateTimePickerAddDate.Location = new System.Drawing.Point(25, 109);
+            this.dateTimePickerAddDate.Name = "dateTimePickerAddDate";
+            this.dateTimePickerAddDate.Size = new System.Drawing.Size(193, 20);
+            this.dateTimePickerAddDate.TabIndex = 2;
+            // 
+            // textBoxAddNombre
+            // 
+            this.textBoxAddNombre.Location = new System.Drawing.Point(25, 57);
+            this.textBoxAddNombre.Name = "textBoxAddNombre";
+            this.textBoxAddNombre.Size = new System.Drawing.Size(154, 20);
+            this.textBoxAddNombre.TabIndex = 3;
+            // 
+            // buttonAddCitaOK
+            // 
+            this.buttonAddCitaOK.Location = new System.Drawing.Point(56, 208);
+            this.buttonAddCitaOK.Name = "buttonAddCitaOK";
+            this.buttonAddCitaOK.Size = new System.Drawing.Size(123, 25);
+            this.buttonAddCitaOK.TabIndex = 4;
+            this.buttonAddCitaOK.Text = "button1";
+            this.buttonAddCitaOK.UseVisualStyleBackColor = true;
+            this.buttonAddCitaOK.Click += new System.EventHandler(this.buttonAddCitaOK_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(746, 457);
+            this.Controls.Add(this.panelAddCita);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAgrega);
             this.Controls.Add(this.buttonModifica);
@@ -113,8 +178,11 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.monthCalendar1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panelAddCita.ResumeLayout(false);
+            this.panelAddCita.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,6 +197,12 @@
         private System.Windows.Forms.Button buttonModifica;
         private System.Windows.Forms.Button buttonAgrega;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelAddCita;
+        private System.Windows.Forms.DateTimePicker dateTimePickerAddDate;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxAddNombre;
+        private System.Windows.Forms.Button buttonAddCitaOK;
     }
 }
 

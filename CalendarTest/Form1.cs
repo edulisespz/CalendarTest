@@ -14,6 +14,8 @@ namespace CalendarTest
     {
         private string Username="";
 
+        List<Cita> listCitas = new List<Cita>();
+
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +37,7 @@ namespace CalendarTest
                 }
             }
 
-            this.label1.Text = Username;
+            this.label1.Text = "Welcome "+ Username;
 
             if (Username == "enfermera")
             {
@@ -46,9 +48,51 @@ namespace CalendarTest
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
-            textBox1.Text = monthCalendar1.SelectionRange.Start.ToString();
+           
+
+            DateTime selectedDate = monthCalendar1.SelectionRange.Start;
+            Cita selecDateCita = listCitas.FirstOrDefault(Obj => Obj.fechaCita == selectedDate);
+
+            if (selecDateCita != null)
+            {
+                textBox1.Text = selecDateCita.nombre + " " + selecDateCita.fechaCita.ToString();
+            }
+            else
+            {
+                textBox1.Text = "no hay citas registradas";
+            }
+            
+            
         }
 
+        private void buttonAgrega_Click(object sender, EventArgs e)
+        {
+            
+            textBoxAddNombre.Text = "";
+            panelAddCita.Visible = true;
+
+        }
+
+
+        private void buttonAddCitaOK_Click(object sender, EventArgs e)
+        {
+            AddListCitas();
+        }
+
+
+        private void AddListCitas()
+        {
+            Cita auxcita = new Cita();
+
+            auxcita.nombre= textBoxAddNombre.Text;
+            auxcita.fechaCita = dateTimePickerAddDate.Value.Date;
+
+            listCitas.Add(auxcita);
+
+            panelAddCita.Visible = false;
+        }
+
+        
 
         
 
