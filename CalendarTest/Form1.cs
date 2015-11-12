@@ -44,6 +44,35 @@ namespace CalendarTest
                 buttonElimina.Enabled = false;
                 buttonModifica.Enabled = false;
             }
+
+
+            panelAddCita.Location = new Point(227, 51);
+            panelDelCita.Location = new Point(227, 51);
+
+
+
+            ///test delete later
+            ///
+            Cita test =new Cita();
+            test.fechaCita=DateTime.Today.Date;
+            test.nombre="aaa";
+            listCitas.Add(test);
+
+            test = new Cita();
+            test.fechaCita = DateTime.Today.Date;
+            test.nombre = "bbb";
+            listCitas.Add(test);
+
+            test = new Cita();
+            test.fechaCita = DateTime.Today.Date;
+            test.nombre = "ccc";
+            listCitas.Add(test);
+
+            test = new Cita();
+            test.fechaCita = DateTime.Today.Date.AddDays(1);
+            test.nombre = "ddd";
+            listCitas.Add(test);
+            ///
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
@@ -51,17 +80,24 @@ namespace CalendarTest
            
 
             DateTime selectedDate = monthCalendar1.SelectionRange.Start;
-            Cita selecDateCita = listCitas.FirstOrDefault(Obj => Obj.fechaCita == selectedDate);
+            bool _encontrado = false;
 
-            if (selecDateCita != null)
+            textBox1.Text = "";
+
+            foreach (Cita elemento in listCitas)
             {
-                textBox1.Text = selecDateCita.nombre + " " + selecDateCita.fechaCita.ToString();
+                if (elemento.fechaCita == selectedDate)
+                {
+                    _encontrado = true;
+                    textBox1.Text =string.Concat(textBox1.Text,
+                        elemento.nombre + " " + elemento.fechaCita.ToString() + Environment.NewLine);
+                }
             }
-            else
+
+            if (_encontrado == false)
             {
                 textBox1.Text = "no hay citas registradas";
             }
-            
             
         }
 
@@ -92,8 +128,37 @@ namespace CalendarTest
             panelAddCita.Visible = false;
         }
 
-        
+        private void buttonElimina_Click(object sender, EventArgs e)
+        {
+            textBoxDelNom.Text = "";
+            panelDelCita.Visible = true;
+        }
 
+
+        private void buttonDelCitaOK_Click(object sender, EventArgs e)
+        {
+            DellListCitas();
+        }
+
+        private void DellListCitas()
+        {
+
+            Cita auxcita = listCitas.FirstOrDefault(
+                O => O.nombre == textBoxDelNom.Text && O.fechaCita == dateTimePickerDelDate.Value.Date
+                    );
+
+
+            if (auxcita != null)
+            {
+                listCitas.Remove(auxcita);
+            }
+            else
+            {
+                MessageBox.Show("No se encuentra");
+            }
+
+            panelDelCita.Visible = false;
+        }
         
 
         
