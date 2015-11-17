@@ -159,6 +159,28 @@ namespace CalendarTest
 
             panelDelCita.Visible = false;
         }
+
+
+
+        private void buttonModifica_Click(object sender, EventArgs e)
+        {
+            textBoxDelNom.Text = "";
+            panelDelCita.Visible = true;
+
+            buttonDelCitaOK.Visible = false;
+            buttonUpdate.Visible = true;
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            buttonDelCitaOK.Visible = true;
+            buttonUpdate.Visible = false;
+
+            DellListCitas();
+
+            textBoxAddNombre.Text = "";
+            panelAddCita.Visible = true;
+        }
         
 
         

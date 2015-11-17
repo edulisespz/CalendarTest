@@ -30,7 +30,6 @@
         {
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.buttonDetalle = new System.Windows.Forms.Button();
             this.buttonElimina = new System.Windows.Forms.Button();
             this.buttonModifica = new System.Windows.Forms.Button();
             this.buttonAgrega = new System.Windows.Forms.Button();
@@ -47,6 +46,7 @@
             this.textBoxDelNom = new System.Windows.Forms.TextBox();
             this.buttonDelCitaOK = new System.Windows.Forms.Button();
             this.panelDelCita = new System.Windows.Forms.Panel();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             this.panelAddCita.SuspendLayout();
             this.panelDelCita.SuspendLayout();
             this.SuspendLayout();
@@ -69,15 +69,6 @@
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "Citas para hoy:\r\n-\r\n-\r\n-";
             // 
-            // buttonDetalle
-            // 
-            this.buttonDetalle.Location = new System.Drawing.Point(32, 372);
-            this.buttonDetalle.Name = "buttonDetalle";
-            this.buttonDetalle.Size = new System.Drawing.Size(169, 58);
-            this.buttonDetalle.TabIndex = 2;
-            this.buttonDetalle.Text = "button detalle";
-            this.buttonDetalle.UseVisualStyleBackColor = true;
-            // 
             // buttonElimina
             // 
             this.buttonElimina.Location = new System.Drawing.Point(32, 290);
@@ -96,6 +87,7 @@
             this.buttonModifica.TabIndex = 4;
             this.buttonModifica.Text = "button modificar";
             this.buttonModifica.UseVisualStyleBackColor = true;
+            this.buttonModifica.Click += new System.EventHandler(this.buttonModifica_Click);
             // 
             // buttonAgrega
             // 
@@ -210,23 +202,34 @@
             this.buttonDelCitaOK.Name = "buttonDelCitaOK";
             this.buttonDelCitaOK.Size = new System.Drawing.Size(123, 25);
             this.buttonDelCitaOK.TabIndex = 4;
-            this.buttonDelCitaOK.Text = "button1";
+            this.buttonDelCitaOK.Text = "DelCitaOK";
             this.buttonDelCitaOK.UseVisualStyleBackColor = true;
             this.buttonDelCitaOK.Click += new System.EventHandler(this.buttonDelCitaOK_Click);
             // 
             // panelDelCita
             // 
             this.panelDelCita.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panelDelCita.Controls.Add(this.buttonUpdate);
             this.panelDelCita.Controls.Add(this.buttonDelCitaOK);
             this.panelDelCita.Controls.Add(this.textBoxDelNom);
             this.panelDelCita.Controls.Add(this.dateTimePickerDelDate);
             this.panelDelCita.Controls.Add(this.label4);
             this.panelDelCita.Controls.Add(this.label5);
-            this.panelDelCita.Location = new System.Drawing.Point(464, 335);
+            this.panelDelCita.Location = new System.Drawing.Point(428, 335);
             this.panelDelCita.Name = "panelDelCita";
             this.panelDelCita.Size = new System.Drawing.Size(241, 355);
             this.panelDelCita.TabIndex = 8;
             this.panelDelCita.Visible = false;
+            // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Location = new System.Drawing.Point(95, 277);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdate.TabIndex = 5;
+            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // Form1
             // 
@@ -239,7 +242,6 @@
             this.Controls.Add(this.buttonAgrega);
             this.Controls.Add(this.buttonModifica);
             this.Controls.Add(this.buttonElimina);
-            this.Controls.Add(this.buttonDetalle);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.monthCalendar1);
             this.Name = "Form1";
@@ -259,7 +261,6 @@
 
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button buttonDetalle;
         private System.Windows.Forms.Button buttonElimina;
         private System.Windows.Forms.Button buttonModifica;
         private System.Windows.Forms.Button buttonAgrega;
@@ -276,6 +277,7 @@
         private System.Windows.Forms.TextBox textBoxDelNom;
         private System.Windows.Forms.Button buttonDelCitaOK;
         private System.Windows.Forms.Panel panelDelCita;
+        private System.Windows.Forms.Button buttonUpdate;
     }
 }
 
